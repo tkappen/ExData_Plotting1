@@ -1,0 +1,8 @@
+png(file = "plot3.png", bg = "transparent")
+par(mfrow=c(1,1))
+with(d,plot(datetime,Sub_metering_1, type="n", xlab="",ylab="Energy sub metering"))
+legend("topright", names(d)[7:9], lty=1, cex=0.8, col=c("black","red","blue"))
+with(d,lines(datetime,Sub_metering_1))
+with(d,lines(datetime,Sub_metering_2, col="red"))
+with(d,lines(datetime,Sub_metering_3, col="blue"))
+dev.off()
